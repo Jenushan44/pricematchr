@@ -8,6 +8,9 @@ from datetime import datetime
 class Product(SQLModel, table=True):
   id: Optional[int] = Field(default = None, primary_key = True)
   name: str = Field(index = True) 
+  url: str 
+  target_price: float 
+  user_email: str
 
 class PriceRecord(SQLModel, table = True): 
   id: Optional[int]  = Field(default = None, primary_key = True)
